@@ -8,7 +8,7 @@ namespace Snake
 {
     class Point
     {
-        public int x;
+        public int x;  // переменные которые имеют свой тип
         public int y;
         public char sym;
 
@@ -16,14 +16,14 @@ namespace Snake
         {
         }
 
-        public Point(int _x, int _y, char _sym)
+        public Point(int _x, int _y, char _sym)  //конструктор Point
         {
             x = _x;
             y = _y;
             sym = _sym;
         }
 
-        public void Draw()
+        public void Draw()    //создание метода рисовать
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
