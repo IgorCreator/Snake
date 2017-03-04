@@ -16,7 +16,7 @@ namespace Snake
         {
         }
 
-        public Point(int _x, int _y, char _sym)  //конструктор Point
+        public Point(int _x, int _y, char _sym)  //конструктор Point-метод для создания различных точек
         {
             x = _x;
             y = _y;
