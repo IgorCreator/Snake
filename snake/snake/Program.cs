@@ -10,12 +10,35 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            HorizontalLine lineH = new HorizontalLine(5, 25, 4, '-');
-            lineH.Draw();
+            //Console.SetBufferSize(85,30);
 
-            VerticalLine lineV = new VerticalLine(4, 14, 5, '|');
-            lineV.Draw();
 
+            //Рисуем рамку
+            HorizontalLine lineUpH = new HorizontalLine(0, 78, 0, '-');
+            HorizontalLine lineDownH = new HorizontalLine(0, 78, 24, '-');
+            lineUpH.Draw();
+            lineDownH.Draw();
+
+            VerticalLine lineleftV = new VerticalLine(0, 24, 0, '|');
+            VerticalLine lineRightV = new VerticalLine(0, 24, 78, '|');
+            lineleftV.Draw();
+            lineRightV.Draw();
+
+            //Корректируем углы
+            Point corner1 = new Point(0,0,'+');
+            Point corner2 = new Point(0, 24, '+');
+            Point corner3 = new Point(78, 0, '+');
+            Point corner4 = new Point(78, 24, '+');
+            corner1.Draw();
+            corner2.Draw();
+            corner3.Draw();
+            corner4.Draw();
+
+            //Начальная позиции для змейки
+            Point p = new Point(4, 5, '*');
+            p.Draw();
+
+            //Что бы сонсоль закрывалась после нажатия клавиши
             Console.ReadLine();
         }
     }
