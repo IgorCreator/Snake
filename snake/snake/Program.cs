@@ -36,7 +36,27 @@ namespace Snake
 
             //Начальная позиции для змейки
             Point p = new Point(4, 5, '*');
-            p.Draw();
+            Snake snake = new Snake(p,4,Direction.RIGHT);
+            snake.Draw();
+
+            while (true) {
+                if(Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();    // по нажатию клавиши осущ. движение змейки
+                    snake.HandleKey(key.Key);
+                    
+                }
+                
+
+                System.Threading.Thread.Sleep(100);
+                snake.Move();
+                
+
+            }
+
+            
+           
+
 
             //Что бы сонсоль закрывалась после нажатия клавиши
             Console.ReadLine();
